@@ -1,0 +1,58 @@
+{
+  "name": [
+    {
+      "name": "Debajyoti Ghosh",
+      "phno": "8101557356",
+      "roomno": "403",
+      "rent": "9000",
+      "deposit": "9000",
+      "due": 0,
+      "id": 1
+    },
+    {
+      "name": "Keshab Mahanta",
+      "phno": "9874563210",
+      "roomno": "403",
+      "rent": "9000",
+      "deposit": "4500",
+      "due": 4500,
+      "id": 2
+    },
+    {
+      "name": "SK MD ASFAR",
+      "phno": "9874563220",
+      "roomno": "208",
+      "rent": "6000",
+      "deposit": "8000",
+      "due": -2000,
+      "id": 3
+    },
+    {
+      "name": "Chirag Mandal",
+      "phno": "1234567890",
+      "roomno": "208",
+      "rent": "6500",
+      "deposit": "6000",
+      "due": 500,
+      "id": 4
+    },
+    {
+      "name": "Susmita Debnath",
+      "phno": "7908972580",
+      "roomno": "106",
+      "rent": "6000",
+      "deposit": "5000",
+      "due": 1000,
+      "id": 5
+    },
+    {
+      "name": "fghjk",
+      "phno": "3456",
+      "roomno": "567",
+      "rent": "8000",
+      "deposit": "9000",
+      "due": -1000,
+      "id": 6
+    }
+  ]
+}
