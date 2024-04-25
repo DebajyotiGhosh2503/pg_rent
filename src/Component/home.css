@@ -1,0 +1,55 @@
+*{ 
+    margin: 0px; 
+    padding: 0px; 
+    box-sizing: border-box; 
+}
+
+body { 
+    font-family: Arial, sans-serif; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    background: linear-gradient(135deg, #fad961, #ff6f61); /* Charming gradient background */ 
+    overflow: hidden; /* Prevents scrollbars from appearing */ 
+}
+
+#homepage { 
+    text-align: center; 
+}
+
+#welcome { 
+    font-size: 5em; /* Large font size for desktop screens */ 
+    animation: fade-in 1.5s ease-in-out, stay-permanent 2s ease-in-out; /* Add animation and stay permanently */ 
+    opacity: 1; /* Initially show the welcome message */ 
+    color: #fff; /* White text color */ 
+}
+
+@keyframes fade-in { 
+    0% { 
+        opacity: 0; 
+        transform: translateY(-50px); /* Start with the welcome message moved up */ 
+    } 
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); /* End with the welcome message in its final position */ 
+    } 
+}
+
+@keyframes stay-permanent {
+    0%, 100% {
+        opacity: 1; /* Keep the welcome message permanently visible */
+    }
+}
+
+@media (max-width: 768px) { 
+    #welcome { 
+        font-size: 3em; /* Adjust font size for smaller screens */ 
+    } 
+}
+
+@media (max-width: 480px) { 
+    #welcome { 
+        font-size: 2em; /* Adjust font size for very small screens */ 
+    } 
+}

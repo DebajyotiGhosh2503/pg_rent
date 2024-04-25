@@ -1,0 +1,94 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#myform {
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); /* Instagram-like gradient */
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeInDown 1s ease;
+    height: auto; /* Change height to auto to fit content */
+}
+
+/* Responsive Layout */
+form {
+    max-width: 600px; /* Adjust max-width to your preference */
+    margin: 0 auto;
+    animation: slideInLeft 1s ease;
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box;
+}
+
+label {
+    font-weight: bold;
+    width: 150px; /* Set label width to a fixed width */
+    margin-right: 20px;
+    color: #666;
+}
+
+button {
+    background-color: #833ab4; /* Instagram-like color */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 30%; /* Adjust button width to fill the container */
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    animation: pulse 1s infinite;
+}
+
+button:hover {
+    background-color: #5a2ee3; /* Darker shade on hover */
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

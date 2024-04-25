@@ -1,0 +1,141 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Main Page */
+#mainpage {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  max-width: 1000px; /* Maximum width set */
+  margin: 20px auto;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Search Bar */
+#searchbar {
+    position: relative;
+    display: inline-block;
+  }
+  
+  input[type="text"] {
+    padding-right: 40px; /* Adjust as needed to provide space for the image */
+    width: 100%; /* Take full width of the parent */
+    box-sizing: border-box; /* Ensure padding is included in width */
+  }
+  
+  #cancel {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Adjust the distance from the right side */
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 20px; /* Set width of the image */
+    height: 20px; /* Set height of the image */
+    opacity: 0.5; /* Initial opacity */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+  }
+  
+  #cancel:hover {
+    opacity: 1; /* Increase opacity on hover */
+  }
+
+/* Record Page */
+#recordpage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Card */
+#card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: calc(30% - 20px);
+  min-width: 250px;
+  margin-bottom: 20px;
+  animation: fadeInCard 0.5s ease-in-out;
+}
+
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Table */
+table {
+  width: 100%;
+}
+
+/* Buttons */
+#edit a{
+    text-decoration: none;
+    color: white;
+}
+.buttons {
+  width: auto;
+  padding: 5px 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttons:hover {
+  background-color: #ffaf91;
+}
+
+/* Pagination */
+#page {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Center items vertically */
+    margin-top: 20px;
+  }
+  
+  /* Page count */
+  #pagecount {
+    flex-grow: 1; /* Grow to fill available space */
+    text-align: center; /* Center text */
+  }
+  
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  #recordpage {
+    justify-content: center;
+  }
+  
+  #card {
+    width: calc(45% - 20px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #card {
+    width: calc(100% - 40px);
+  }
+}

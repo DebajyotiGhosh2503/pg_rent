@@ -1,10 +1,10 @@
 import React from "react";
-import style from "./home.module.css";
+import "./home.css";
 
 const Home = () => {
   return (
-    <div id={style.homepage}>
-      <div id={style.welcome}>
+    <div id="homepage">
+      <div id="welcome">
         <h1>Welcome</h1>
       </div>
     </div>

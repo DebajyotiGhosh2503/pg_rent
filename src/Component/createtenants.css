@@ -1,0 +1,112 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* Gradient Background */
+#myform {
+    background: linear-gradient(135deg, #3b5998, #8b9dc3);
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeInDown 1s ease;
+    height: auto; /* Change height to auto to fit content */
+  }
+  
+  /* Responsive Layout */
+  form {
+    max-width: 600px; /* Adjust max-width to your preference */
+    margin: 0 auto;
+    animation: slideInLeft 1s ease;
+  }
+  
+  input, label {
+    opacity: 0;
+    animation: slideInRight 1s forwards;
+    animation-delay: 0.5s;
+  }
+  
+  input {
+    width: calc(50% - 10px); /* Adjusting width for two inputs in a row with a standard gap */
+    padding: 10px;
+    margin: 10px 5px; /* Add margin between inputs */
+    border-radius: 5px;
+    border: none;
+    float: right; /* Float inputs to the right */
+  }
+  
+  label {
+    font-weight: bold;
+    display: block;
+    padding-top: 17px;
+    margin-bottom: 5px;
+    width: 50%; /* Set label width to match input width */
+    float: left; /* Float labels to the left */
+    clear: both; /* Clear floats to ensure they are on the same line */
+  }
+  
+  /* Button Animation */
+  button {
+    background-color: #2e4e8f; /* Facebook blue */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 30%; /* Adjust button width to fill the container */
+    margin: 30px 0 10px; /* Add margin to the top to move the button down */
+    animation: pulse 1s infinite;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background-color: #06225a; /* Darker shade of Facebook blue on hover */
+  }
+  
+  /* Animations */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  

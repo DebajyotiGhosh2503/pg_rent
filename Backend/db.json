@@ -5,8 +5,8 @@
       "phno": "8101557356",
       "roomno": "403",
       "rent": "9000",
-      "deposit": "9000",
-      "due": 0,
+      "deposit": "5500",
+      "due": 3500,
       "id": 1
     },
     {
@@ -23,14 +23,14 @@
       "phno": "9874563220",
       "roomno": "208",
       "rent": "6000",
-      "deposit": "8000",
-      "due": -2000,
+      "deposit": "6000",
+      "due": 0,
       "id": 3
     },
     {
       "name": "Chirag Mandal",
       "phno": "1234567890",
-      "roomno": "208",
+      "roomno": "1456",
       "rent": "6500",
       "deposit": "6000",
       "due": 500,
@@ -44,15 +44,6 @@
       "deposit": "5000",
       "due": 1000,
       "id": 5
-    },
-    {
-      "name": "fghjk",
-      "phno": "3456",
-      "roomno": "567",
-      "rent": "8000",
-      "deposit": "9000",
-      "due": -1000,
-      "id": 6
     }
   ]
 }

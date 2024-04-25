@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import style from './home.module.css';
+import './rentrecords.css';
 import pic1 from '../Img/black cross.png';
 
 const Rentrecords = () => {
@@ -65,20 +65,20 @@ const Rentrecords = () => {
   };
 
   return (
-    <div id={style.mainpage}>
-      <div id={style.searchbar}>
+    <div id="mainpage">
+      <div id="searchbar">
         <input
           type="text"
           value={searchPhno}
           onChange={(e) => setSearchPhno(e.target.value)}
           placeholder="Enter Phone Number"
         />
-        <img src={pic1} alt="" id={style.cancel} onClick={cancelSearch} />
+        <img src={pic1} alt="" id="cancel" onClick={cancelSearch} />
       </div>
-      <div id={style.recordpage}>
+      <div id="recordpage">
         {currentItems.length > 0 ? (
           currentItems.map((x) => (
-            <div id={style.card} key={x.id}>
+            <div id="card" key={x.id}>
               <table>
                 <tbody>
                   <tr>
@@ -125,15 +125,15 @@ const Rentrecords = () => {
 
                   <tr>
                     <td>
-                      <button className={style.buttons} id={style.edit}>
+                      <button className="buttons" id="edit">
                         <Link to={`/editrecords/${x.id}`}>Edit</Link>
                       </button>
                     </td>
 
                     <td>
                       <button
-                        className={style.buttons}
-                        id={style.delete}
+                        className="buttons"
+                        id="delete"
                         onClick={() => {
                           deleteTenant(x.id, x.name);
                         }}
@@ -150,11 +150,11 @@ const Rentrecords = () => {
           <p>No records found.</p>
         )}
       </div>
-      <div id={style.page}>
+      <div id="page">
         <button onClick={handlePrevPage} disabled={currentPage === 1}>
           Previous Page
         </button>
-        <div id={style.pagecount}>
+        <div id="pagecount">
           {currentPage}/{totalPages}
         </div>
         <button onClick={handleNextPage} disabled={currentPage === totalPages}>
