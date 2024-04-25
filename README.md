@@ -1,7 +1,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-🙂🙂🙂  IN THIS PROJECT A SIMPLE JSON FILE USED AT EARLY STAGE, SO AFTER HOSTING CRUD OPERATION CAN'T BE DONE IN THE FOLLOWING HOSTING LINK. 🙂🙂🙂
+🙂🙂🙂  IN THIS PROJECT A SIMPLE JSON FILE USED FOR DATABASE AT EARLY STAGE, SO AFTER HOSTING CRUD OPERATION CAN'T BE DONE IN THE FOLLOWING HOSTING LINK. 🙂🙂🙂
 
 🙂🙂🙂 APART FROM THAT EVERY THING WILL WORK AS USUAL. 🙂🙂🙂
 
