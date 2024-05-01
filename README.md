@@ -7,6 +7,21 @@
 
 Public Hosted Link - https://pg-rent-management.web.app/ 
 
+For better understaning I am sharing the images that I have taken after executing the project in localhost.
+
+Image-1 (Home Page) 👇🏻👇🏻👇🏻👇🏻
+
+![image](https://github.com/DGRYZER/pg_rent/assets/91932081/703e279b-fb67-4cfc-810f-871e55b4f49c)
+
+imgae-2 (Create Tenant Page) 👇🏻👇🏻👇🏻👇🏻
+
+![image](https://github.com/DGRYZER/pg_rent/assets/91932081/e4170a58-e387-484d-9db6-c6cef3c9c8fb)
+
+image-3 (Rents Records Page) 👇🏻👇🏻👇🏻👇🏻
+
+![image](https://github.com/DGRYZER/pg_rent/assets/91932081/2f53a623-a825-41a7-8dd3-e808b972100e)
+
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 # Getting Started with Create React App
