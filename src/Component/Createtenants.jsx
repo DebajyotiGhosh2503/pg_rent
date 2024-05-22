@@ -1,7 +1,6 @@
-import axios from "axios";
 import React, { useState } from "react";
 import "./createtenants.css";
-
+import TenantService from '../services/TenantService'
 const Createtenants = () => {
   const [name, setName] = useState("");
   const [phno, setPhno] = useState("");
@@ -11,15 +10,15 @@ const Createtenants = () => {
   const [details, setDetails] = useState("");
   const [error, setError] = useState("");
 
-  const submit = () => {
+  const submit = async() => {
     if (!name || !phno || !roomno || !rent || !deposit) {
       setError("Please fill in all the fields.");
       return;
     }
 
     const payload = { name, phno, roomno, rent, deposit, due: rent - deposit };
-    axios
-      .post("http://localhost:3000/name", payload)
+    console.log(payload)
+    await TenantService.createtenant(payload)
       .then(() => {
         setName("");
         setPhno("");

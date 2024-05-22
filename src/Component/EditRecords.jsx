@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
+import TenantService from '../services/TenantService'
 
 const EditRecords = () => {
   const [name, setName] = useState("");
@@ -12,22 +12,26 @@ const EditRecords = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/name/${index}`)
+    const fetchdata = async () => {
+      await TenantService.gettenantsById(index)
       .then((response) => {
-        setName(response.data.name);
-        setPhno(response.data.phno);
-        setRoomno(response.data.roomno);
-        setRent(response.data.rent);
-        setDeposit(response.data.deposit);
+        console.log("response",response);
+        setName(response.customer.name);
+        setPhno(response.customer.phno);
+        setRoomno(response.customer.roomno);
+        setRent(response.customer.rent);
+        setDeposit(response.customer.deposit);
       })
       .catch((error) => {
         console.log(error);
       });
+    }
+    fetchdata();
   }, [index]); // Add 'index' to the dependencies array
 
   const formHandle = () => {
     const payload = { name, phno, roomno, rent, deposit, due: rent - deposit };
-    axios.put(`http://localhost:3000/name/${index}`, payload)
+    TenantService.updatetenant(payload, index)
       .then(() => {
         console.log("Data has been saved");
         navigate('/rentrecords');

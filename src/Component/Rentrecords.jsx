@@ -1,8 +1,8 @@
-import axios from 'axios';
 import React, { useEffect, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import './rentrecords.css';
 import pic1 from '../Img/black cross.png';
+import TenantService from '../services/TenantService'
 
 const Rentrecords = () => {
   const [content, setContent] = useState([]);
@@ -14,8 +14,9 @@ const Rentrecords = () => {
 
   const fetchData = useCallback(async () => {
     try {
-      const response = await axios.get('http://localhost:3000/name');
-      setContent(response.data);
+      const response = await TenantService.gettenants()
+    console.log('response.data for tenent list',response.customer);
+      setContent(response.customer);
     } catch (error) {
       console.log(error);
     }
@@ -26,6 +27,7 @@ const Rentrecords = () => {
   }, [fetchData]);
 
   useEffect(() => {
+    
     const filteredData = content.filter((x) =>
       x.phno.includes(searchPhno)
     );
@@ -50,9 +52,9 @@ const Rentrecords = () => {
   const endIndex = startIndex + itemsPerPage;
   const currentItems = filteredContent.slice(startIndex, endIndex);
 
-  const deleteTenant = async (id, name) => {
+  const deleteTenant = (id, name) => {
     try {
-      await axios.delete(`http://localhost:3000/name/${id}`);
+      TenantService.deletetenant(id);
       window.location.assign('/rentrecords');
       alert(`The details of ${name} have been deleted`);
     } catch (error) {
@@ -126,7 +128,7 @@ const Rentrecords = () => {
                   <tr>
                     <td>
                       <button className="buttons" id="edit">
-                        <Link to={`/editrecords/${x.id}`}>Edit</Link>
+                        <Link to={`/editrecords/${x._id}`}>Edit</Link>
                       </button>
                     </td>
 
@@ -135,7 +137,7 @@ const Rentrecords = () => {
                         className="buttons"
                         id="delete"
                         onClick={() => {
-                          deleteTenant(x.id, x.name);
+                          deleteTenant(x._id, x.name);
                         }}
                       >
                         Delete
