@@ -15,8 +15,8 @@ const Rentrecords = () => {
   const fetchData = useCallback(async () => {
     try {
       const response = await TenantService.gettenants()
-    console.log('response.data for tenent list',response.customer);
-      setContent(response.customer);
+    console.log('response.data for tenent list',response.tenent);
+      setContent(response.tenent);
     } catch (error) {
       console.log(error);
     }

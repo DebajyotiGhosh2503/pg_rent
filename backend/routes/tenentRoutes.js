@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 // const requireAuth = require('../middleware/requireAuth');
-const {getAll,getById,create,updateById,deleteById} = require ('../controllers/customerController')
+const {getAll,getById,create,updateById,deleteById} = require ('../controllers/tenentController')
 // const upload = require('../middleware/Multer');
 
 const router = express.Router();

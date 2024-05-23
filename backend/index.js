@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 // const HrRoutes = require('./routes/HrRoutes');
-const customerRoutes = require('./routes/customerRoutes');
+const tenentRoutes = require('./routes/tenentRoutes');
 const { PORT, MONGODB_URI } = require('./config');
 
 const app = express();
@@ -22,8 +22,8 @@ mongoose.connect(MONGODB_URI, {
   .catch(err => console.error(err));
 
 // Routes
-// app.use('/cust');
-app.use('/cust', customerRoutes);
+// app.use('/tenent');
+app.use('/tenent', tenentRoutes);
 
 // Start server
 app.listen(PORT, () => {

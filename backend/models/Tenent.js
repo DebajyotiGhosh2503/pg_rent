@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const customerSchema = new mongoose.Schema({
+const tenentSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -26,5 +26,5 @@ const customerSchema = new mongoose.Schema({
     required: true,
   }
 }, { timestamps: true });
-const Customer = mongoose.model('CustomerDetails', customerSchema);
-module.exports = Customer;
+const Tenent = mongoose.model('TenentDetails', tenentSchema);
+module.exports = Tenent;

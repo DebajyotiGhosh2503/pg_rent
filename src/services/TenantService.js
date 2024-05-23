@@ -8,7 +8,7 @@ const TenantService = {
   gettenants: async () => {
     // console.log('getting customer')
     try {
-      const response = await axios.get(`${baseUrl}/cust/get`);
+      const response = await axios.get(`${baseUrl}/tenent/get`);
       return response.data;
     } catch (error) {
       // console.log(error.response.data.error);
@@ -22,7 +22,7 @@ const TenantService = {
 
   gettenantsById: async (custid) => {
     // console.log('getting customer by id')
-    const response = await axios.get(`${baseUrl}/cust/get/${custid}`);
+    const response = await axios.get(`${baseUrl}/tenent/get/${custid}`);
     return response.data;
   },
 
@@ -30,7 +30,7 @@ const TenantService = {
     // console.log('customer created')
     try {
 
-      const response = await axios.post(`${baseUrl}/cust/create`, data);
+      const response = await axios.post(`${baseUrl}/tenent/create`, data);
       return response.data;
     } catch (error) {
       if (error.response && error.response.data) {
@@ -45,7 +45,7 @@ const TenantService = {
     // console.log('customer updated')
     try {
 
-      const response = await axios.put(`${baseUrl}/cust/update/${custId}`, data);
+      const response = await axios.put(`${baseUrl}/tenent/update/${custId}`, data);
       return response.data;
     } catch (error) {
       if (error.response && error.response.data) {
@@ -58,7 +58,7 @@ const TenantService = {
   deletetenant: async (custId) => {
     // console.log('customer deleted')
     try {
-      const response = await axios.delete(`${baseUrl}/cust/delete/${custId}`);
+      const response = await axios.delete(`${baseUrl}/tenent/delete/${custId}`);
       return response.data;
     } catch (error) {
       if (error.response && error.response.data) {

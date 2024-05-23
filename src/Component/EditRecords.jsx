@@ -16,11 +16,11 @@ const EditRecords = () => {
       await TenantService.gettenantsById(index)
       .then((response) => {
         console.log("response",response);
-        setName(response.customer.name);
-        setPhno(response.customer.phno);
-        setRoomno(response.customer.roomno);
-        setRent(response.customer.rent);
-        setDeposit(response.customer.deposit);
+        setName(response.tenent.name);
+        setPhno(response.tenent.phno);
+        setRoomno(response.tenent.roomno);
+        setRent(response.tenent.rent);
+        setDeposit(response.tenent.deposit);
       })
       .catch((error) => {
         console.log(error);

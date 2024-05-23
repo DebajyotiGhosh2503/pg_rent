@@ -1,4 +1,4 @@
-const Customer = require('../models/Customer');
+const Tenent = require('../models/Tenent');
 
 
 
@@ -7,8 +7,8 @@ const getAll = async (req, res) => {
 
   try {
 
-    const customer = await Customer.find().sort({ createdAt: -1 });
-    res.status(200).json({ customer });
+    const tenent = await Tenent.find().sort({ createdAt: -1 });
+    res.status(200).json({ tenent });
 
   } catch (error) {
     console.error(error);
@@ -19,11 +19,11 @@ const getAll = async (req, res) => {
 // Get an employee by ID
 const getById = async (req, res) => {
   try {
-    const customer = await Customer.findById(req.params.id);
-    if (!customer) {
+    const tenent = await Tenent.findById(req.params.id);
+    if (!tenent) {
       return res.status(404).json({ message: 'Customer not found' });
     }
-    res.status(200).json({ customer });
+    res.status(200).json({ tenent });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Internal server error' });
@@ -38,9 +38,9 @@ const create = async (req, res) => {
     const { name, phno, roomno, rent, deposit, due } = req.body;
 
 
-    const customer = new Customer({ name, phno, roomno, rent, deposit, due });
-    await customer.save();
-    res.status(201).json({ message: 'Customer created successfully', customer });
+    const tenent = new Tenent({ name, phno, roomno, rent, deposit, due });
+    await tenent.save();
+    res.status(201).json({ message: 'Customer created successfully', tenent });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Internal server error' });
@@ -58,11 +58,11 @@ const updateById = async (req, res) => {
       name, phno, roomno, rent, deposit, due
     };
 
-    const customer = await Customer.findByIdAndUpdate(req.params.id, customerupdate, { new: true });
-    if (!customer) {
+    const tenent = await Tenent.findByIdAndUpdate(req.params.id, customerupdate, { new: true });
+    if (!tenent) {
       return res.status(404).json({ error: 'Customer not found' });
     }
-    res.status(200).json({ message: 'Customer updated successfully', customer });
+    res.status(200).json({ message: 'Customer updated successfully', tenent });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Internal server error' });
@@ -73,8 +73,8 @@ const updateById = async (req, res) => {
 // Delete an employee by ID
 const deleteById = async (req, res) => {
   try {
-    const customer = await Customer.findByIdAndDelete(req.params.id);
-    if (!customer) {
+    const tenent = await Tenent.findByIdAndDelete(req.params.id);
+    if (!tenent) {
       return res.status(404).json({ message: 'Customer not found' });
     }
 

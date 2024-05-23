@@ -1,6 +1,10 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+🙂🙂🙂  IN THIS PROJECT A SIMPLE JSON FILE USED FOR DATABASE AT EARLY STAGE, SO AFTER HOSTING CRUD OPERATION CAN'T BE DONE IN THE FOLLOWING HOSTING LINK. 🙂🙂🙂
+
+🙂🙂🙂 APART FROM THAT EVERY THING WILL WORK AS USUAL. 🙂🙂🙂
+
 Public Hosted Link - https://pg-rent-management.web.app/ 
 
 For better understaning I am sharing the images that I have taken after executing the project in localhost.
@@ -15,11 +19,7 @@ imgae-2 (Create Tenant Page) 👇🏻👇🏻👇🏻👇🏻
 
 image-3 (Rents Records Page) 👇🏻👇🏻👇🏻👇🏻
 
-![image](https://github.com/DGRYZER/pg_rent/assets/91932081/5be031d0-2522-4eb0-8491-bea7d461feaa)
-
-image-4 (Edit/update Records Page) 👇🏻👇🏻👇🏻👇🏻
-
-![image](https://github.com/DGRYZER/pg_rent/assets/91932081/bfad8c4b-d753-44e4-9d3d-7784439f36fa)
+![image](https://github.com/DGRYZER/pg_rent/assets/91932081/2f53a623-a825-41a7-8dd3-e808b972100e)
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
