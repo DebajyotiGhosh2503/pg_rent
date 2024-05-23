@@ -1,10 +1,6 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-🙂🙂🙂  IN THIS PROJECT A SIMPLE JSON FILE USED FOR DATABASE AT EARLY STAGE, SO AFTER HOSTING CRUD OPERATION CAN'T BE DONE IN THE FOLLOWING HOSTING LINK. 🙂🙂🙂
-
-🙂🙂🙂 APART FROM THAT EVERY THING WILL WORK AS USUAL. 🙂🙂🙂
-
 Public Hosted Link - https://pg-rent-management.web.app/ 
 
 For better understaning I am sharing the images that I have taken after executing the project in localhost.
